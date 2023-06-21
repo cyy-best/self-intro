@@ -549,7 +549,7 @@ main {
 
 .service-item-text {
   color: var(--light-gray);
-  font-size: var(--fs-6);
+  font-size: var(--fs-4);
   font-weight: var(--fw-3);
   line-height: 1.6;
 }
