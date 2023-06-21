@@ -722,13 +722,39 @@ main {
 
 
 /**
- * #clients 
+ * #skills 
  */
 
-.clients { margin-bottom: 15px; }
+.skills { margin-bottom: 0px; }
 
-.clients-list {
+.skill-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.skill-part{
   display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+  /* border: 1px solid #967e76; */
+  border-radius: 14px;
+  .h4{
+    margin: 0 auto;
+    padding-bottom: 10px;
+    border-bottom: 4px solid var(--bg-gradient-jet);
+  }
+  .skills-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &.has-scrollbar{
+      gap: 0;
+      padding: 20px 0 20px 0;
+    }
+  }
+}
+
+.skills-list {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 15px;
@@ -742,18 +768,22 @@ main {
   scroll-padding-inline: 25px;
 }
 
-.clients-item {
+.skills-list.has-scrollbar{
+  margin:0;
+}
+.skills-item {
   min-width: 50%;
   scroll-snap-align: start;
+  text-transform: capitalize;
 }
 
-.clients-item img {
+.skills-item img {
   width: 100%;
   filter: grayscale(1);
   transition: var(--transition-1);
 }
 
-.clients-item img:hover { filter: grayscale(0); }
+.skills-item img:hover { filter: grayscale(0); }
 
 
 
@@ -1156,7 +1186,7 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-400);
   padding: 13px 20px;
-  border: 1px solid var(--jet);
+  border: 1px solid var(--white-2);
   border-radius: 14px;
   outline: none;
 }
@@ -1235,10 +1265,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 @media (min-width: 450px) {
 
   /**
-   * client
+   * skill
    */
 
-  .clients-item { min-width: calc(33.33% - 10px); }
+  .skills-item { min-width: calc(33.33% - 10px); }
 
 
 
@@ -1470,16 +1500,16 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: 35px;
   }
 
-  /* clients */
+  /* skills */
 
-  .clients-list {
+  .skills-list {
     gap: 50px;
     margin: 0 -30px;
     padding: 45px;
     scroll-padding-inline: 45px;
   }
 
-  .clients-item { min-width: calc(33.33% - 35px); }
+  .skills-item { min-width: calc(33.33% - 35px); }
 
 
 
@@ -1733,9 +1763,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .testimonials-item { min-width: calc(50% - 15px); }
 
-  /* clients */
+  /* skills */
 
-  .clients-item { min-width: calc(25% - 38px); }
+  .skills-item { min-width: calc(25% - 38px); }
 
 
 
