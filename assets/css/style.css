@@ -812,6 +812,9 @@ main {
 .timeline-list {
   font-size: var(--fs-6);
   margin-left: 45px;
+  .h4{
+    font-weight: 100;
+  }
 }
 
 .timeline-item { position: relative; }
@@ -1262,6 +1265,13 @@ textarea.form-input::-webkit-resizer { display: none; }
  * responsive larger than 450px screen
  */
 
+@media (min-width:200px) {
+  .skill-container{
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
 @media (min-width: 450px) {
 
   /**
@@ -1269,7 +1279,10 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .skills-item { min-width: calc(33.33% - 10px); }
-
+  .skill-container{
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+  }
 
 
   /**
