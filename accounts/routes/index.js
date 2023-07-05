@@ -24,7 +24,7 @@ router.post('/account', (req, res) => {
   console.log(req.body)
   let id = shortid.generate();
   //写入文件
-  db.get('accounts').unshift({ id: id, ...req.body }).write();
+  db.get('accounts').push({ id: id, ...req.body }).write();
   res.render('success', { msg: 'Add Successful', url: '/account' })
 });
 
