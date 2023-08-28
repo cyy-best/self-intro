@@ -1,1 +1,1 @@
-Thank you for visiting my github
+Thank you for visiting my GitHub
